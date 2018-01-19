@@ -23,3 +23,9 @@ hs_err_pid*
 .DS_Store
 artifact/.DS_Store
 doc/.DS_Store
+
+output/
+*.iml
+*.ipr
+~*.*
+tutorials.iml
