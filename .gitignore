@@ -22,7 +22,7 @@
 hs_err_pid*
 .DS_Store
 artifact/.DS_Store
-doc/.DS_Store
+docs/.DS_Store
 
 output/
 *.iml

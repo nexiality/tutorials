@@ -14,7 +14,7 @@ capabilities dealing with Mongo, which will be separately discussed.
 First thing we need to do is to set up _profile_ for each database connectivity we need.  To do 
 that, we would add connection details in data file, like this:
 
-![database connectivity](resources/db-setup.png)
+![database connectivity](image/db-setup.png)
 
 Here, we have 3 distinct database profiles specified:
 - `qapay01`
