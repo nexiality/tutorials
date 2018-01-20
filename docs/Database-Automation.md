@@ -1,5 +1,9 @@
-# Database Automation
-
+---
+title: Database Automation with Nexial / Setup
+layout: post
+---
+ 
+# Database Automation 
 ![logo](image/logo-x.png)
 
 ## Introduction

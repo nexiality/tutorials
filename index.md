@@ -1,6 +1,10 @@
-# Nexial Tutorials
+---
+title: Nexial Tutorials
+layout: post
+---
 
-![logo](docs/image/logo.png)
+# Nexial Tutorials
+![logo](docs/image/logo.png) 
 
 _excuse the mess while we are tidying up, do check in frequently as we will continue to add content here..._
 
