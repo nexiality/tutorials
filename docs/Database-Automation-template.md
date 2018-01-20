@@ -1,13 +1,8 @@
 # Database Automation
 
-![logo](image/logo-x.png) &nbsp;&nbsp;&nbsp;[« Back to Previous Section](Database-Automation-multisql.md)
+![logo](image/logo-x.png) &nbsp;&nbsp;&nbsp;[« Back to Previous Section](Database-Automation-expression.md)
 
-## Section 3: Nexial Expression for database automation
+## Section 12: Bulk generate SQL via "template"
 
 
 ---
-
-Up next: [Bulk generate SQL via "template"](Database-Automation-template.md)
-
-12)	
-
