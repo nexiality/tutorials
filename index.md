@@ -1,8 +1,3 @@
----
-title: Nexial Tutorials
-layout: post
----
-
 # Nexial Tutorials
 ![logo](docs/image/logo.png) 
 
