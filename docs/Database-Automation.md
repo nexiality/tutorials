@@ -53,31 +53,35 @@ contains no dot (`.`).
 1. As a convinience, it might be best to put all these profiles in the `#default` data sheet so
 that they can reuse for any test scenario.
 
-Let's do a quick to verify that the profile is set up correctly.  Here's [the script](../artifact/script/rdbms-01.xlsx) that we will
-run, which simply runs a query to retrieve server's current time:
+Let's do a quick run to verify that the profile is set up correctly.  Here's 
+[the script](../artifact/script/rdbms-01.xlsx) that simply executes a query to retrieve the 
+server's current time:
 
 ![Hello World](image/rdbms-01-HelloWorld.png)
 
 The corresponding [data file](../artifact/data/rdbms-01.data.xlsx) looks as follows:
 
-| data sheet     |  content                                                  |
-| :------------- | :-------------------------------------------------------- |
-| `[#default]`   | ![#default](image/rdbms-01-HelloWorld.data2.png)          |
-| `[HelloWorld]` | ![Hello World, data](image/rdbms-01-HelloWorld.data.png)  |
+| data sheet   |  content                                                  |
+| :----------- | :-------------------------------------------------------- |
+| [#default]   | ![#default](image/rdbms-mydb.png)          |
+| [HelloWorld] | ![Hello World, data](image/rdbms-01-HelloWorld.data.png)  |
 
 The referenced [sqlite db](../artifact/data/chinook.db) is located in the data directory.
 
 Here's the output: 
-
-`sentry.[sh|cmd] -script <PROJECT_HOME>/artifact/script/rdbms-01.xlsx`
+```
+nexial.[sh|cmd] -script <PROJECT_HOME>/artifact/script/rdbms-01.xlsx
+```
 
 ![Hello World, output](image/rdbms-01-HelloWorld.output.png)
 
-We can see from the output that the SQL executed successfully (using profile `my_db2`).  Looking at
+We can see from the output that the SQL executed successfully (using profile `mydb`).  Looking at
 the output, we can see that the database connection is established, and the `${tell time}` query
 executed successfully.  The `base|verbose(text)` command simply prints out the textual representation
-of the `${my_db2 result}`. The last line in the output - `data        =[{1=2018-01-19 17:15:54.09715}]` 
-is the resultset of this query.
+of the `${mydb result}`. The last line in the output is the resultset of this query: 
+`data        =[{RIGHT_NOW=2018-01-21 21:12:09}]` 
+
+Great! Now let's see what else we can do with database automation.
 
 ***
 
