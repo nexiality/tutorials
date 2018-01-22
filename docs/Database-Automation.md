@@ -29,7 +29,7 @@ a series of configuration together.  In this case, a database connection profile
 data variables with the same 'prefix':
 
 ```
-<PROFILE>.type       = postgresql|mysql|sqlserver|oracle|db2|isam|connx
+<PROFILE>.type       = connx|db2|isam|mysql|oracle|postgresql|sqlite|sqlserver
 <PROFILE>.url        = jdbc:... ...
 <PROFILE>.user       = ...
 <PROFILE>.password   = ...
@@ -37,7 +37,8 @@ data variables with the same 'prefix':
 <PROFILE>.treatNullAs= ...
 ```
 
-Check out [rdbms](https://confluence.ep.com/display/QA/rdbms) for more details.  
+Check out [rdbms](https://confluence.ep.com/display/QA/rdbms) for more details.  We can add support 
+for more database upon request.
 
 Note the following:
 1. Only `.type`, `.url`, `.user`, and `.password` are **REQUIRED**.
@@ -52,16 +53,22 @@ contains no dot (`.`).
 1. As a convinience, it might be best to put all these profiles in the `#default` data sheet so
 that they can reuse for any test scenario.
 
-Let's do a quick to verify that the profile is set up correctly.  Here's the script that we will
+Let's do a quick to verify that the profile is set up correctly.  Here's [the script](../artifact/script/rdbms-01.xlsx) that we will
 run, which simply runs a query to retrieve server's current time:
 
 ![Hello World](image/rdbms-01-HelloWorld.png)
 
-The corresponding data file looks as follows:
+The corresponding [data file](../artifact/data/rdbms-01.data.xlsx) looks as follows:
 
-![Hello World, data](image/rdbms-01-HelloWorld.data.png)
+| data sheet | content   |
+|------------|-----------|
+|`[#default]`|![#default](image/rdbms-01-HelloWorld.data2.png)|
+|            |the referenced [sqlite db](../artifact/data/chinook.db) is located in the data directory|
+|`HelloWorld`|![Hello World, data](image/rdbms-01-HelloWorld.data.png)|
 
-Here's the output:
+Here's the output: 
+
+`sentry.[sh|cmd] -script <PROJECT_HOME>/artifact/script/rdbms-01.xlsx`
 
 ![Hello World, output](image/rdbms-01-HelloWorld.output.png)
 

@@ -1,14 +1,13 @@
 # Database Automation
-
 ![logo](image/logo-x.png) &nbsp;&nbsp;&nbsp;[« Back to Previous Section](Database-Automation.md)
 
 ## Section 2: Dynamic SQL / incorporate data variable
 
-Inborn within Nexial is the flexibility to construct "things" - more specifically, test data - 
-dynamically.  We will have a separate tutorial dedicated to that topic.  For now, we want to
-explore the possibility of constructing SQL query dynamically so that:
+Inborn within Nexial is the flexibility to dynamically construct "things" - more specifically, test 
+data.  We will have a separate tutorial dedicated to that topic.  For now, we want to explore the 
+possibility of constructing SQL query dynamically so that:
 - our automation can react accordingly to external controls
-- our automation can be reusable - like a template - towards multiple similar scenarios
+- our automation can be reusable - like a template - towards similar scenarios
 - one automation can integrate with other another automation script by utilizing the same
 data variables
 
