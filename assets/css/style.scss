@@ -3,6 +3,25 @@
 
 @import "{{ site.theme }}";
 
+header {
+    padding: 40px 20px;
+}
+
+#content-wrapper {
+    padding: 20px 50px;
+}
+
+.inner {
+    width: none !important;
+}
+
+#main-content h2 {
+    text-indent:      11px !important;
+    border-bottom:    1px solid #ccc;
+    border-top:       1px solid #ccc;
+    background-color: #e5eef3;
+}
+
 #main-content img {
     max-width: none !important;
 }
@@ -13,4 +32,8 @@ th {
 
 td, th {
     padding: 3px !important;
+}
+
+pre code {
+    background-color: transparent;
 }
