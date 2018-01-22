@@ -60,11 +60,12 @@ run, which simply runs a query to retrieve server's current time:
 
 The corresponding [data file](../artifact/data/rdbms-01.data.xlsx) looks as follows:
 
-| data sheet   |  content    |
-| ------------ | ----------- |
-| `[#default]` | ![#default](image/rdbms-01-HelloWorld.data2.png) |
-|              | the referenced [sqlite db](../artifact/data/chinook.db) is located in the data directory |
-| `HelloWorld` | ![Hello World, data](image/rdbms-01-HelloWorld.data.png) |
+| data sheet     |  content                                                  |
+| :------------- | :-------------------------------------------------------- |
+| `[#default]`   | ![#default](image/rdbms-01-HelloWorld.data2.png)          |
+| `[HelloWorld]` | ![Hello World, data](image/rdbms-01-HelloWorld.data.png)  |
+
+The referenced [sqlite db](../artifact/data/chinook.db) is located in the data directory.
 
 Here's the output: 
 
