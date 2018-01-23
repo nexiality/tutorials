@@ -15,6 +15,11 @@ header {
     width: auto !important;
 }
 
+.inner a.button {
+    display:    none;
+    visibility: hidden;
+}
+
 #main-content h2 {
     text-indent:      11px !important;
     border-bottom:    1px solid #ccc;
