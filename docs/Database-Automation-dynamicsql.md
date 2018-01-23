@@ -13,7 +13,7 @@ data variables
 
 Let's see some examples.
 
-#### Example 1: Parameterizing SQL
+## Example 1: Parameterizing SQL
 We'll start with a simple example.   With Nexial, we can construct a SQL statement with dynamic 
 data fairly effortlessly.  In essense, we can use the `${...}` syntax to substitute a variable 
 with its value.  For example,
@@ -106,12 +106,14 @@ The respective email content are as follows:
 ![DynamicSQL1a email4](image/rdbms-02-DynamicSQL2.output-email4.png)
 
 
-#### Example 2: Just-in-time WHERE clause construction
+## Example 2: Just-in-time WHERE clause construction
 
-#### Example 3: Dynamic SELECT clause 
+## Example 3: Dynamic SELECT clause 
 
 There's a much more powerful way to generate dynamic SQL using Nexial Expression.  We will cover 
 this in a later tutorial.
+
+Click on the link below to get a better understand of what we can inspect from a SELECT query.
 
 ---
 
