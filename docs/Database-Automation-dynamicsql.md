@@ -180,17 +180,130 @@ The last command saved the output to a CSV file (excerpt below):<br/>
 And yes, they are all Jazz records! ![](image/smiley-with-shades.png)
 
 
-## Example 4: 
+## Example 4: Runtime Data Variable Overrides
+Continue with the same idea as previous example, we can dynamically create SQL queries using 
+runtime data variable override.  What we saw in the last example is to declare the data variable in
+the data file to control the query generation.  In the last example, since a data variable named
+`genre` was declared with value `Jazz`, the second test step was invoked while the first and third
+test steps were skipped.
 
-## Example 3: Dynamic SELECT clause 
+But we can also declare data variable, or override declared data variable, at runtime.  
 
+##### --- sidebar >>>
+> Before we go further, a bit of explanation is warranted here.  In our script and data file, we 
+reference a data variable named `media type`.  While it is possible to define such variable at
+runtime via the above method (i.e. using `export ` or `set` command), having a space in the 
+variable name makes it a fair bit more difficult.  This has to do with how the space character
+is treated by the shell or command prompt.
+> 
+> To make things simpler, we could modify our script to reference `mediatype` instead of 
+`media type`.  Or we could define `mediatype` at runtime, and the assign the value of `mediatype`
+to `media type` in our script:
+>
+>     media type | ${mediatype}
+>
+> Let's see this idea in action...
+
+(OSX/*NIX)
+```
+export JAVA_OPT=-Dmediatype=MPEG
+nexial.sh -script [PROJECT_HOME]/artifact/script/rdbms-02.xlsx -scenario DynamicSQL2a
+```
+
+(Windows)
+```
+set JAVA_OPT=-Dmediatype=MPEG
+nexial.cmd -script [PROJECT_HOME]\artifact\script\rdbms-02.xlsx -scenario DynamicSQL2a
+```
+
+Here's the data file for this example:<br/>
+![DynamicSQL 2a data](image/rdbms-02-DynamicSQL2a.data.png)
+
+The value assignment is at the last line.
+
+The script uses the same flow control to control multiple test steps.  Notice that we are still
+referencing to `media type` here:<br/>
+![DynamicSQL 2s script](image/rdbms-02-DynamicSQL2a.script.png)
+
+The output shows that the test steps controlled by `genre` and `album` are skipped:<br/>
+![DynamicSQL 2a output](image/rdbms-02-DynamicSQL2a.output.png)
+
+Suppose we define value for `genre` and `album` instead:
+
+(OSX/*NIX)
+```
+export JAVA_OPT="-Dgenre=Jazz -Dalbum=One"
+nexial.sh -script [PROJECT_HOME]/artifact/script/rdbms-02.xlsx -scenario DynamicSQL2a
+```
+
+(Windows)
+```
+set JAVA_OPT=-Dgenre=Jazz -Dalbum=One
+nexial.cmd -script [PROJECT_HOME]\artifact\script\rdbms-02.xlsx -scenario DynamicSQL2a
+```
+
+The output, just as expected:<br/>
+![DynamicSQL 2a output](image/rdbms-02-DynamicSQL2a.output2.png)
+
+
+
+## Example 5: Dynamic SELECT clause 
+How about dynamic SELECT clause instead? If we can dynamically generate the WHERE clause, this 
+should be reasonably attainable.  In fact any part of a SQL statement can be dynamically rendered.
+From Nexial's standpoint, this is by and large variable and text manipulation.
+
+Let's say we need to display a 'simplified' and 'detailed' view of the same set of data.  We could 
+simply create two nearly identical SQL statements.  But this might incur ongoing maintenance and our
+script might get more complicated.  Alternatively, we can dynamically inject additional columns to 
+the same 'simplified' SQL statement - thus keeping all the WHERE clause intact.  Like this:
+
+Data file:<br/>
+![DynamicSQL3 data](image/rdbms-02-DynamicSQL3.data.png)
+
+Script:<br/>
+![DynamicSQL3 script](image/rdbms-02-DynamicSQL3.script.png)
+
+Here, we create a data variable, `songs detailed SELECT`, that holds the additional SELECT clause 
+(more columns).  Then in the script, we dynamically merge `songs detailed SELECT` into `songs SQL` 
+via the value of `detail`.  As you can see, `detail` is not defined in the data sheet.  Once
+again, we can utilize the runtime override capability of Nexial:
+
+
+##### Run #1:
+```
+set|export JAVA_OPT=-Ddetail=false
+nexial.[sh|cmd] -script [PROJECT_HOME]/artifact/sript/rdbms-02.xlsx -scenario DynamicsSQL3
+```
+
+Output - observe the generated SQL statement only has 4 columns:<br/>
+![DynamicSQL3 output](image/rdbms-02-DynamicSQL3.output1.png)
+
+The generated CSV file reflects the same:<br/>
+![DynamicSQL3 csv](image/rdbms-02-DynamicSQL3.csv1.png)
+
+<br/>
+
+##### Run #2:
+```
+set|export JAVA_OPT=-Ddetail=true
+nexial.[sh|cmd] -script [PROJECT_HOME]/artifact/sript/rdbms-02.xlsx -scenario DynamicsSQL3
+```
+
+Output - observe the generated SQL statement with the inclusion of additional columns after `UNITPRICE`:<br/>
+![DynamicSQL3 output](image/rdbms-02-DynamicSQL3.output.png)
+
+The generated CSV file reflects the same:<br/>
+![DynamicSQL3 csv](image/rdbms-02-DynamicSQL3.csv.png)
+
+<br/>
+------------------------------------------------------------------------------------------------------------------------
+<br/>
 
 There's a much more powerful way to generate dynamic SQL using Nexial Expression.  We will cover 
 this in a later tutorial.
 
 Click on the link below to get a better understand of what we can inspect from a SELECT query.
 
----
+------------------------------------------------------------------------------------------------------------------------
 
 Up next: [SELECT to inspect](Database-Automation-selectinspect.md)
-
