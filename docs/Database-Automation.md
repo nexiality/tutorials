@@ -24,7 +24,7 @@ Here, we have 3 distinct database profiles specified:
 - `isam`
 
 You can differentiate them by how these profile names are used as prefix to a set of data variables.  
-This is the approach in Sentry to create complex data grouping, where an arbitrary "prefix" groups
+This is the approach in Nexial to create complex data grouping, where an arbitrary "prefix" groups
 a series of configuration together.  In this case, a database connection profile consists a set of 
 data variables with the same 'prefix':
 
