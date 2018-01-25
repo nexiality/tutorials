@@ -2,20 +2,26 @@
 ![logo](image/logo-x.png) &nbsp;&nbsp;&nbsp;[« Back to Previous Section](Database-Automation.md)
 
 ## Section 2: Dynamic SQL / incorporate data variable
-Built within Nexial is the flexibility to dynamically construct "things" - more specifically, test 
-data.  We will have a separate tutorial dedicated to that topic.  For now, we want to explore the 
+Built within Nexial is the flexibility to dynamically construct "things" such as test data.  We 
+will have a separate tutorial dedicated to that topic.  For now, we want to explore the 
 possibility of constructing SQL query dynamically so that:
 - our automation can react accordingly to external controls
 - our automation can be reusable - like a template - towards similar scenarios
 - one automation can integrate with other another automation script by utilizing the same
 data variables
 
-Let's see some examples.  Throughout this tutorial, we will be using a sample 
-[sqlite](http://www.sqlite.org/) database provided by the good people at 
-[sqlitetutorial.net](http://www.sqlitetutorial.net/sqlite-sample-database/).  This sample 
-database has the following ERD:
+Throughout this tutorial, we will be using a sample [sqlite](http://www.sqlite.org/) database 
+provided by the good people at [sqlitetutorial.net](http://www.sqlitetutorial.net/sqlite-sample-database/).  
+As a point of reference, this sample database has the following ERD:
 
 [![sample sqlite](image/sqlite-sample-database-diagram-color.png)](http://www.sqlitetutorial.net/sqlite-sample-database/)
+
+The examples shown here can be found in [this script](../artifact/script/rdbms-02.xlsx) and its 
+corresponding [data file](../artifact/data/rdbms-02.data.xlsx).
+
+Now let's see some examples!
+
+------------------------------------------------------------------------------------------------------------------------
 
 
 ## Example 1: Parameterizing SQL
@@ -24,15 +30,14 @@ fairly effortlessly.  In essense, we can use the `${...}` syntax to substitute a
 value.  For example,
 
 | variable name | value                        |
-| ------------- | ---------------------------- |
+| :------------ | :--------------------------- |
 | first name    | John                         |
 | last name     | Denver                       |
 | full name     | `${first name} ${last name}` |
 
 As such, and as one would expect, `${full name}` would resolve to `John Denver`.
 
-Here's our example in action.  The [data file](../artifact/data/rdbms-02.data.xlsx) contains 2
-data sheets:
+Here's our example in action.  The data file contains 2 data sheets:
 
 | data sheet    |  content                                            |
 | :------------ | :-------------------------------------------------- |
@@ -60,32 +65,28 @@ ORDER BY REP_NAME, CUSTOMER_NAME;
 So now, if we would to change `customer country` to another value, like `Germany`, then the SQL
 would render dynamically to the new value.
 
-Notice that Nexial will automatically trim away the trailing semi-colon as well.  This is a
-convenience in case you are copying a query from your favourite database editor or from another 
-SQL file.
+Notice that Nexial will automatically trim away the trailing semi-colon as well - a convenience 
+in case you are copying a query from your favourite database editor or from another SQL file.
 
-Our [script](../artifact/data/rdbms-02.data.xlsx) contains a query execution and a series of 
-assertions:
-
+Our script contains a query execution and a series of assertions:<br/>
 ![DynamicSQL1](image/rdbms-02-DynamicSQL1.png)
 
 First we execute the query represented by `${supporting customer SQL}`.  Then a series of 
-assertion on the query result:
+assertions on the query result:
 1. Make sure exactly 5 rows are returned
 2. Make sure that `Jane Peacock`, `Steven Johnson` and `Margaret Park` are all supporting 
 representatives for the Brazil customers.
 
-Before executing the script, let's see what this query would render:
+Before executing the script, let's see what this query would render:<br/>
 ![DynamicSQL1 result](image/rdbms-02-DynamicSQL1.result.png)
 
 So if everything goes as plan, our script would return 100% PASS.  Let's run it:
 
 ```
-nexial.[sh|cmd] -script <PROJECT_HOME>/artifact/script/rdbms-02.xlsx -scenario DynamicSQL1
+nexial.[sh|cmd] -script [PROJECT_HOME]/artifact/script/rdbms-02.xlsx -scenario DynamicSQL1
 ```
 
-The output confirms the expected outcome:
-
+The output confirms the expected outcome:<br/>
 ![DynamicSQL1](image/rdbms-02-DynamicSQL1.output.png)
 
 > **We can apply this simple technique across multiple variables and we can use the same variable
@@ -93,19 +94,17 @@ over multiple queries.**
 
 
 ## Example 2: Looping Through Resultset
-As an idea of what one can do with dynamic SQL, here's a slight modification to the same example:
-
+As an idea of what one can do with dynamic SQL, here's a slight modification to the same example:<br/>
 ![DynamicSQL1a](image/rdbms-02-DynamicSQL1a.script.png)
 
 Instead of asserting query result, we can loop through the resultset to dynamically generate 
 external content.  In this case, we are generating what would have been a customer-specific 
 marketing email content.  By using `base|repeatUntil(steps,maxWaitMs)` command we can loop
 through a series of commands, such as generating email content for each row of the resultset. The
-resulting output looks something like this:
-
+resulting output looks something like this:<br/>
 ![DynamicSQL1a output](image/rdbms-02-DynamicSQL1a.output.png)
 
-The respective email content are as follows:
+The respective email content are as follows:<br/>
 ![DynamicSQL1a email0](image/rdbms-02-DynamicSQL1a.output-email0.png)
 ![DynamicSQL1a email1](image/rdbms-02-DynamicSQL1a.output-email1.png)
 ![DynamicSQL1a email2](image/rdbms-02-DynamicSQL1a.output-email2.png)
@@ -118,8 +117,7 @@ Continue the idea of generating SQL statement dynamically, we can also generate 
 clause, or a portion of it, dynamically.  Using flow control, we can control the test steps is
 execute or to skip.  
 
-Let's see an example:
-
+Let's see an example:<br/>
 ![DynamicSQL2 data](image/rdbms-02-DynamicSQL2.data.png)
 
 Here, the data file contains a SQL statement (named as `songs SQL`).  We have also a bunch of 
@@ -133,8 +131,7 @@ The general idea is to append one of these _partial WHERE clauses_ to `${song SQ
 the impact of the said query.  In order to do so dynamically, we want to control the query 
 modification via [flow control](../../documentation/flowcontrols/).
 
-Take a look at the script:
-
+Take a look at the script:<br/>
 ![DynamicSQL2 script](image/rdbms-02-DynamicSQL2.script.png)
 
 Notice the `ProceedIf(...)` statements under the **flow controls** column.  This is how you read it:
@@ -166,15 +163,18 @@ WHERE C.ALBUMID = A.ALBUMID
 The last line of the above SQL comes from `${genre where clause}`.  This is in agreement with the 
 executed test step, which basically combines `${songs SQL}` and `${genre where clause}` as one query.
 
-Output:
+Executing this example:
+```
+nexial.[sh|cmd] -script [PROJECT_HOME]/artifact/script/rdbms-02.xlsx -scenario DynamicSQL2
+```
 
+Output:<br/>
 ![DynamicSQL2 output](image/rdbms-02-DynamicSQL2.output.png)
 
 Observe that the first and third commands were _SKIPPED_ since the condition in their respective 
 flow control was not met.
 
-The last command saved the output to a CSV file (excerpt below):
-
+The last command saved the output to a CSV file (excerpt below):<br/>
 ![DynamicSQL2 csv](image/rdbms-02-DynamicSQL2.csv.png)
 
 And yes, they are all Jazz records! ![](image/smiley-with-shades.png)

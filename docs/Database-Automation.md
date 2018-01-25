@@ -29,12 +29,12 @@ a series of configuration together.  In this case, a database connection profile
 data variables with the same 'prefix':
 
 ```
-<PROFILE>.type       = connx|db2|isam|mysql|oracle|postgresql|sqlite|sqlserver
-<PROFILE>.url        = jdbc:... ...
-<PROFILE>.user       = ...
-<PROFILE>.password   = ...
-<PROFILE>.automcommit= ...
-<PROFILE>.treatNullAs= ...
+[PROFILE].type       = connx|db2|isam|mysql|oracle|postgresql|sqlite|sqlserver
+[PROFILE].url        = jdbc:... ...
+[PROFILE].user       = ...
+[PROFILE].password   = ...
+[PROFILE].automcommit= ...
+[PROFILE].treatNullAs= ...
 ```
 
 Check out [rdbms](https://confluence.ep.com/display/QA/rdbms) for more details.  We can add support 
@@ -43,19 +43,19 @@ for more database upon request.
 Note the following:
 1. Only `.type`, `.url`, `.user`, and `.password` are **REQUIRED**.
 1. `.url` should represent the JDBC connection string specific to each database vendor.  Please 
-check vendor documentation for more details.
+			check vendor documentation for more details.
 1. As of now, `connx` and `isam` are synonymous. The underlying JDBC connectivity to "isam" is 
-implemented through the [Connx JDBC driver](https://www.connx.com/databases.php), which is a 
-JDBC Type 3 driver. If you wish to connect to ISAM database, please obtain JDBC driver from Connx 
-and place it under `/lib` directory.  We might support other ISAM JDBC drivers in the future.
+			implemented through the [Connx JDBC driver](https://www.connx.com/databases.php), which is a 
+			JDBC Type 3 driver. If you wish to connect to ISAM database, please obtain JDBC driver from 
+			Connx and place it under `/lib` directory.  We might support other ISAM JDBC drivers in the 
+			future.
 1. You can create as many profiles as needed, but make sure the profile names are unique and 
-contains no dot (`.`).
+			contains no dot (`.`).
 1. As a convinience, it might be best to put all these profiles in the `#default` data sheet so
-that they can reuse for any test scenario.
+			that they can reuse for any test scenario.
 
-Let's do a quick run to verify that the profile is set up correctly.  Here's 
-[the script](../artifact/script/rdbms-01.xlsx) that simply executes a query to retrieve the 
-server's current time:
+Let's do a quick run to verify that the profile is set up correctly.  Here's the script that 
+simply executes a query to retrieve the server's current time:
 
 ![Hello World](image/rdbms-01-HelloWorld.png)
 
@@ -70,7 +70,7 @@ The referenced [sqlite db](../artifact/data/chinook.db) is located in the data d
 
 Here's the output: 
 ```
-nexial.[sh|cmd] -script <PROJECT_HOME>/artifact/script/rdbms-01.xlsx
+nexial.[sh|cmd] -script [PROJECT_HOME]/artifact/script/rdbms-01.xlsx
 ```
 
 ![Hello World, output](image/rdbms-01-HelloWorld.output.png)

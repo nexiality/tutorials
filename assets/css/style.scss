@@ -20,11 +20,21 @@ header {
     visibility: hidden;
 }
 
+#main-content {
+    width: 980px;
+}
+
+#main-content h1 {
+    margin: 5px auto;
+}
+
 #main-content h2 {
     text-indent:      11px !important;
     border-bottom:    1px solid #ccc;
     border-top:       1px solid #ccc;
     background-color: #e5eef3;
+    padding:          5px 0;
+    margin:           30px 0 10px 0;
 }
 
 #main-content img {
@@ -36,9 +46,14 @@ th {
 }
 
 td, th {
-    padding: 3px !important;
+    padding: 5px !important;
 }
 
 pre code {
     background-color: transparent;
+}
+
+#sidebar {
+    display:    none;
+    visibility: hidden;
 }
