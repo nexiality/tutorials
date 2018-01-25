@@ -177,7 +177,7 @@ flow control was not met.
 The last command saved the output to a CSV file (excerpt below):<br/>
 ![DynamicSQL2 csv](image/rdbms-02-DynamicSQL2.csv.png)
 
-And yes, they are all Jazz records! ![](image/smiley-with-shades.png)
+And yes, they are all Jazz records! ![8-)](image/smiley-with-shades.png)
 
 
 ## Example 4: Runtime Data Variable Overrides
@@ -245,6 +245,30 @@ nexial.cmd -script [PROJECT_HOME]\artifact\script\rdbms-02.xlsx -scenario Dynami
 The output, just as expected:<br/>
 ![DynamicSQL 2a output](image/rdbms-02-DynamicSQL2a.output2.png)
 
+There is _YET_ another way to handle the issue with data variable names that contain space(s). 
+Nexial provides a convenient way to manage all the runtime override into a file, which will be 
+loaded at the start of an execution.  This project - as part of Nexial convention - must be
+found in `[PROJECT]/artifact/projects.properties`.  It is however optional.  Let's see this feature
+in action:
+
+`[PROJECT]/artifact/projects.properties`:
+```
+media type=MPEG
+album=One
+genre=Jazz
+nexial.assistantMode=on
+```
+
+Any of the Nexial system variable or project-level data variable can be entered here as runtime 
+override.  Let's run the same script now:
+
+```
+nexial.[sh|cmd] -script [PROJECT_HOME]/artifact/script/rdbms-02.xlsx -scenario DynamicSQL2a
+```
+
+![DynamicSQL 2b output](image/rdbms-02-DynamicSQL2a.output3.png)
+
+Sure enough, since all the 3 data variables are defined, all the test steps were executed!
 
 
 ## Example 5: Dynamic SELECT clause 
@@ -281,8 +305,6 @@ Output - observe the generated SQL statement only has 4 columns:<br/>
 The generated CSV file reflects the same:<br/>
 ![DynamicSQL3 csv](image/rdbms-02-DynamicSQL3.csv1.png)
 
-<br/>
-
 ##### Run #2:
 ```
 set|export JAVA_OPT=-Ddetail=true
@@ -295,9 +317,7 @@ Output - observe the generated SQL statement with the inclusion of additional co
 The generated CSV file reflects the same:<br/>
 ![DynamicSQL3 csv](image/rdbms-02-DynamicSQL3.csv.png)
 
-<br/>
 ------------------------------------------------------------------------------------------------------------------------
-<br/>
 
 There's a much more powerful way to generate dynamic SQL using Nexial Expression.  We will cover 
 this in a later tutorial.
