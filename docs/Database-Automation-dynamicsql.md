@@ -177,7 +177,7 @@ flow control was not met.
 The last command saved the output to a CSV file (excerpt below):<br/>
 ![DynamicSQL2 csv](image/rdbms-02-DynamicSQL2.csv.png)
 
-And yes, they are all Jazz records! ![8-)](image/smiley-with-shades.png)
+And yes, they are all Jazz records! :sunglasses:
 
 
 ## Example 4: Runtime Data Variable Overrides
@@ -245,11 +245,15 @@ nexial.cmd -script [PROJECT_HOME]\artifact\script\rdbms-02.xlsx -scenario Dynami
 The output, just as expected:<br/>
 ![DynamicSQL 2a output](image/rdbms-02-DynamicSQL2a.output2.png)
 
-There is _YET_ another way to handle the issue with data variable names that contain space(s). 
-Nexial provides a convenient way to manage all the runtime override into a file, which will be 
-loaded at the start of an execution.  This project - as part of Nexial convention - must be
-found in `[PROJECT]/artifact/projects.properties`.  It is however optional.  Let's see this feature
-in action:
+##### Wait, there's more!
+There is _YET_ another way to handle the issue with data variable names that contain space(s).  
+And there are multiple added benefits to this technique as well.
+
+It turns out that Nexial provides another way to specify data variables besides using data file and
+`set|export JAVA_OPT=...` command line.  Nexial provides a convenient way to manage all the runtime 
+override into a file, which loads at the start of an execution.  This optional file - as part of 
+Nexial convention - must be found in `[PROJECT]/artifact/projects.properties`.  Let's see this 
+feature in action:
 
 `[PROJECT]/artifact/projects.properties`:
 ```
@@ -265,6 +269,11 @@ override.  Let's run the same script now:
 ```
 nexial.[sh|cmd] -script [PROJECT_HOME]/artifact/script/rdbms-02.xlsx -scenario DynamicSQL2a
 ```
+
+You can find a [sample project.properties here](../artifact/RENAME_TO_project.properties), which 
+you will need to rename from `RENAME_TO_projects.properties` to `project.properties` in order for 
+it to take effect.
+
 
 ![DynamicSQL 2b output](image/rdbms-02-DynamicSQL2a.output3.png)
 
