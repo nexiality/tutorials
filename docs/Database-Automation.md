@@ -2,8 +2,8 @@
 ![logo](image/logo-x.png)
 
 <div class="site-links">
-<span class="link-none">&laquo; Previous</span> | 
-<span class="link-next"><a href="Database-Automation-dynamicsql.md">Dynamic SQL / incorporate data variable &raquo;</span>
+<a class="link-none">&laquo; Previous</a> | 
+<a class="link-next" href="Database-Automation-dynamicsql.html">Dynamic SQL / incorporate data variable &raquo;</a>
 </div>
 
 ## Introduction
@@ -89,5 +89,5 @@ Great! Now let's see what else we can do with database automation.
 
 <div class="site-links">
 <span class="link-none">&laquo; Previous</span> | 
-<span class="link-next"><a href="Database-Automation-dynamicsql.md">Dynamic SQL / incorporate data variable &raquo;</span>
+<span class="link-next"><a href="Database-Automation-dynamicsql.html">Dynamic SQL / incorporate data variable &raquo;</span>
 </div>

@@ -2,12 +2,12 @@
 ![logo](image/logo-x.png)
 
 <div class="site-links">
-<a class="link-previous" href="Database-Automation-dynamicsql.md">&laquo; Dynamic SQL / incorporate data variable</a> | 
-<a class="link-next" href="Database-Automation-selectvalidate.md">SELECT to validate &raquo;</a>
+<a class="link-previous" href="Database-Automation-dynamicsql.html">&laquo; Dynamic SQL / incorporate data variable</a> | 
+<a class="link-next" href="Database-Automation-selectvalidate.html">SELECT to validate &raquo;</a>
 </div>
 
 ## Section 3: SELECT to inspect
-We've seen multiple examples in the [previous](Database-Automation-dynamicsql.md) section how one 
+We've seen multiple examples in the [previous](Database-Automation-dynamicsql.html) section how one 
 can use Nexial to display data from static or dynamically generated SQL queries.  In this section, 
 we will dig deeper and focus on the the various aspects of what we can inspect from the execution
 of one or more queries.
@@ -66,6 +66,6 @@ artifacts.
 ***
 
 <div class="site-links">
-<a class="link-previous" href="Database-Automation-dynamicsql.md">&laquo; Dynamic SQL / incorporate data variable</a> | 
-<a class="link-next" href="Database-Automation-selectvalidate.md">SELECT to validate &raquo;</a>
+<a class="link-previous" href="Database-Automation-dynamicsql.html">&laquo; Dynamic SQL / incorporate data variable</a> | 
+<a class="link-next" href="Database-Automation-selectvalidate.html">SELECT to validate &raquo;</a>
 </div>

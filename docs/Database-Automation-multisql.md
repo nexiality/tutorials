@@ -3,8 +3,8 @@
 ![logo](image/logo-x.png)
 
 <div class="site-links">
-<a class="link-previous" href="Database-Automation-transaction.md">&laquo; Transaction Support</a> | 
-<a class="link-next" href="Database-Automation-expression.md">Nexial Expression &raquo;</a>
+<a class="link-previous" href="Database-Automation-transaction.html">&laquo; Transaction Support</a> | 
+<a class="link-next" href="Database-Automation-expression.html">Nexial Expression &raquo;</a>
 </div>
 
 
@@ -14,6 +14,6 @@
 ***
 
 <div class="site-links">
-<a class="link-previous" href="Database-Automation-transaction.md">&laquo; Transaction Support</a> | 
-<a class="link-next" href="Database-Automation-expression.md">Nexial Expression &raquo;</a>
+<a class="link-previous" href="Database-Automation-transaction.html">&laquo; Transaction Support</a> | 
+<a class="link-next" href="Database-Automation-expression.html">Nexial Expression &raquo;</a>
 </div>

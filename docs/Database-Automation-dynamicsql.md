@@ -2,9 +2,10 @@
 ![logo](image/logo-x.png) 
 
 <div class="site-links">
-<a class="link-previous" href="Database-Automation.md">&laquo; Introduction</a> | 
-<a class="link-next" href="Database-Automation-selectinspect.md">SELECT to inspect &raquo;</a>
+<a class="link-previous" href="Database-Automation.html">&laquo; Introduction</a> | 
+<a class="link-next" href="Database-Automation-selectinspect.html">SELECT to inspect &raquo;</a>
 </div>
+
 
 ## Section 2: Dynamic SQL / incorporate data variable
 Built within Nexial is the flexibility to dynamically construct "things" such as test data.  We 
@@ -339,6 +340,6 @@ In the next section we'll get a better understand of what we can inspect from a 
 ***
 
 <div class="site-links">
-<a class="link-previous" href="Database-Automation.md">&laquo; Introduction</a> | 
-<a class="link-next" href="Database-Automation-selectinspect.md">SELECT to inspect &raquo;</a>
+<a class="link-previous" href="Database-Automation.html">&laquo; Introduction</a> | 
+<a class="link-next" href="Database-Automation-selectinspect.html">SELECT to inspect &raquo;</a>
 </div>

@@ -4,8 +4,8 @@
 
 
 <div class="site-links">
-<a class="link-previous" href="Database-Automation-selectvalidate.md">&laquo; SELECT to validate</a> | 
-<a class="link-next" href="Database-Automation-metadata.md">Query metadata &raquo;</a>
+<a class="link-previous" href="Database-Automation-selectvalidate.html">&laquo; SELECT to validate</a> | 
+<a class="link-next" href="Database-Automation-metadata.html">Query metadata &raquo;</a>
 </div>
 
 ## Section 5: SELECT to CSV / bulk comparison
@@ -45,6 +45,6 @@ I should say that this is _also_ expected since the underlying queries for them 
 ***
 
 <div class="site-links">
-<a class="link-previous" href="Database-Automation-selectvalidate.md">&laquo; SELECT to validate</a> | 
-<a class="link-next" href="Database-Automation-metadata.md">Query metadata &raquo;</a>
+<a class="link-previous" href="Database-Automation-selectvalidate.html">&laquo; SELECT to validate</a> | 
+<a class="link-next" href="Database-Automation-metadata.html">Query metadata &raquo;</a>
 </div>
