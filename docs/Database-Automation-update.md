@@ -4,7 +4,7 @@
 
 <div class="site-links site-links-header">
 <a class="link-previous" href="Database-Automation-flowcontrol.html">&laquo; Flow Control</a> | 
-<a class="link-next" href="Database-Automation-tranaction.html">Transaction support &raquo;</a>
+<a class="link-next" href="Database-Automation-transaction.html">Transaction support &raquo;</a>
 </div>
 
 
@@ -15,5 +15,5 @@
 
 <div class="site-links site-links-footer">
 <a class="link-previous" href="Database-Automation-flowcontrol.html">&laquo; Flow Control</a> | 
-<a class="link-next" href="Database-Automation-tranaction.html">Transaction support &raquo;</a>
+<a class="link-next" href="Database-Automation-transaction.html">Transaction support &raquo;</a>
 </div>
