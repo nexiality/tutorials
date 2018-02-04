@@ -1,8 +1,19 @@
 # Database Automation
 
-![logo](image/logo-x.png) &nbsp;&nbsp;&nbsp;[« Back to Previous Section](Database-Automation-expression.md)
+![logo](image/logo-x.png)
 
-## Section 12: Bulk generate SQL via "template"
+<div class="site-links">
+<a class="link-previous" href="Database-Automation-expression.md">&laquo; Nexial Expression</a> | 
+<a class="link-none">next &raquo;</a>
+</div>
 
 
----
+## Section 12: Template-based SQL Generation
+
+
+***
+
+<div class="site-links">
+<a class="link-previous" href="Database-Automation-expression.md">&laquo; Nexial Expression</a> | 
+<a class="link-none">next &raquo;</a>
+</div>

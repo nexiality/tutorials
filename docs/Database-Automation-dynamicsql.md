@@ -1,5 +1,10 @@
 # Database Automation
-![logo](image/logo-x.png) &nbsp;&nbsp;&nbsp;[« Back to Previous Section](Database-Automation.md)
+![logo](image/logo-x.png) 
+
+<div class="site-links">
+<a class="link-previous" href="Database-Automation.md">&laquo; Introduction</a> | 
+<a class="link-next" href="Database-Automation-selectinspect.md">SELECT to inspect &raquo;</a>
+</div>
 
 ## Section 2: Dynamic SQL / incorporate data variable
 Built within Nexial is the flexibility to dynamically construct "things" such as test data.  We 
@@ -177,7 +182,7 @@ flow control was not met.
 The last command saved the output to a CSV file (excerpt below):<br/>
 ![DynamicSQL2 csv](image/rdbms-02-DynamicSQL2.csv.png)
 
-And yes, they are all Jazz records! :sunglasses:
+And yes, they are all Jazz records!  :sunglasses: 
 
 
 ## Example 4: Runtime Data Variable Overrides
@@ -245,7 +250,7 @@ nexial.cmd -script [PROJECT_HOME]\artifact\script\rdbms-02.xlsx -scenario Dynami
 The output, just as expected:<br/>
 ![DynamicSQL 2a output](image/rdbms-02-DynamicSQL2a.output2.png)
 
-##### Wait, there's more!
+#### Wait, there's more!
 There is _YET_ another way to handle the issue with data variable names that contain space(s).  
 And there are multiple added benefits to this technique as well.
 
@@ -326,13 +331,14 @@ Output - observe the generated SQL statement with the inclusion of additional co
 The generated CSV file reflects the same:<br/>
 ![DynamicSQL3 csv](image/rdbms-02-DynamicSQL3.csv.png)
 
-------------------------------------------------------------------------------------------------------------------------
-
 There's a much more powerful way to generate dynamic SQL using Nexial Expression.  We will cover 
 this in a later tutorial.
 
-Click on the link below to get a better understand of what we can inspect from a SELECT query.
+In the next section we'll get a better understand of what we can inspect from a SELECT query.
 
-------------------------------------------------------------------------------------------------------------------------
+***
 
-Up next: [SELECT to inspect](Database-Automation-selectinspect.md)
+<div class="site-links">
+<a class="link-previous" href="Database-Automation.md">&laquo; Introduction</a> | 
+<a class="link-next" href="Database-Automation-selectinspect.md">SELECT to inspect &raquo;</a>
+</div>

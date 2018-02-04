@@ -1,10 +1,19 @@
 # Database Automation
 
-![logo](image/logo-x.png) &nbsp;&nbsp;&nbsp;[« Back to Previous Section](Database-Automation-transaction.md)
+![logo](image/logo-x.png)
 
-## Section 10: Executing multiple SQLs / Execution SQL file
+<div class="site-links">
+<a class="link-previous" href="Database-Automation-transaction.md">&laquo; Transaction Support</a> | 
+<a class="link-next" href="Database-Automation-expression.md">Nexial Expression &raquo;</a>
+</div>
 
 
----
+## Section 10: Multiple SQLs
 
-Up next: [Nexial Expression for database automation](Database-Automation-expression.md)
+
+***
+
+<div class="site-links">
+<a class="link-previous" href="Database-Automation-transaction.md">&laquo; Transaction Support</a> | 
+<a class="link-next" href="Database-Automation-expression.md">Nexial Expression &raquo;</a>
+</div>

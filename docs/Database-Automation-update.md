@@ -1,10 +1,18 @@
 # Database Automation
 
-![logo](image/logo-x.png) &nbsp;&nbsp;&nbsp;[« Back to Previous Section](Database-Automation-flowcontrol.md)
+![logo](image/logo-x.png)
 
-## Section 3: UPDATE database via SQL
+<div class="site-links">
+<a class="link-previous" href="Database-Automation-flowcontrol.md">&laquo; Flow Control</a> | 
+<a class="link-next" href="Database-Automation-tranaction.md">Transaction support &raquo;</a>
+</div>
+
+## Section 8: UPDATE database
 
 
----
+***
 
-Up next: [Transaction support](Database-Automation-transaction.md)
+<div class="site-links">
+<a class="link-previous" href="Database-Automation-flowcontrol.md">&laquo; Flow Control</a> | 
+<a class="link-next" href="Database-Automation-tranaction.md">Transaction support &raquo;</a>
+</div>

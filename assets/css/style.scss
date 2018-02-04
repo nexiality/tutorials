@@ -57,3 +57,30 @@ pre code {
     display:    none;
     visibility: hidden;
 }
+
+.site-links {
+    vertical-align: middle;
+    font-size:      10pt;
+    text-transform: lowercase;
+    color:          #999;
+    float:          right;
+}
+
+.site-links .link-next, .site-links .link-previous {
+    text-shadow:      -1px 3px 8px rgba(160, 180, 80, 0.5);
+    color:            #794 !important;
+    font-weight:      bold;
+    letter-spacing:   0pt;
+    background-color: rgba(240, 250, 210, 0.5);
+    padding:          3px;
+}
+
+.site-links .link-next:hover, .site-links .link-previous:hover {
+    text-decoration: none;
+}
+
+.site-links .link-none {
+    color:       #ccc !important;
+    cursor:      default;
+    font-weight: lighter !important;
+}

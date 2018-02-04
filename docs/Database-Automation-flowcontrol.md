@@ -1,10 +1,19 @@
 # Database Automation
 
-![logo](image/logo-x.png) &nbsp;&nbsp;&nbsp;[« Back to Previous Section](Database-Automation-metadata.md)
+![logo](image/logo-x.png)
 
-## Section 7: Flow control through query resultset and metadata
+<div class="site-links">
+<a class="link-previous" href="Database-Automation-metadata.md">&laquo; Query Metadata</a> | 
+<a class="link-next" href="Database-Automation-update.md">UPDATE database &raquo;</a>
+</div>
 
 
----
+## Section 7: Flow Control
 
-Up next: [UPDATE database via SQL](Database-Automation-update.md)
+
+***
+
+<div class="site-links">
+<a class="link-previous" href="Database-Automation-metadata.md">&laquo; Query Metadata</a> | 
+<a class="link-next" href="Database-Automation-update.md">UPDATE database &raquo;</a>
+</div>

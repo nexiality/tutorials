@@ -1,10 +1,19 @@
 # Database Automation
 
-![logo](image/logo-x.png) &nbsp;&nbsp;&nbsp;[« Back to Previous Section](Database-Automation-update.md)
+![logo](image/logo-x.png)
+
+<div class="site-links">
+<a class="link-previous" href="Database-Automation-update.md">&laquo; UPDATE database</a> | 
+<a class="link-next" href="Database-Automation-multisql.md">Multiple SQLs &raquo;</a>
+</div>
+
 
 ## Section 9: Transaction support
 
 
----
+***
 
-Up next: [Executing multiple SQLs / Execution SQL file](Database-Automation-multisql.md)
+<div class="site-links">
+<a class="link-previous" href="Database-Automation-update.md">&laquo; UPDATE database</a> | 
+<a class="link-next" href="Database-Automation-multisql.md">Multiple SQLs &raquo;</a>
+</div>
