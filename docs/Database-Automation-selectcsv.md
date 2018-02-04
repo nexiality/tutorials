@@ -3,7 +3,7 @@
 ![logo](image/logo-x.png)
 
 
-<div class="site-links">
+<div class="site-links site-links-header">
 <a class="link-previous" href="Database-Automation-selectvalidate.html">&laquo; SELECT to validate</a> | 
 <a class="link-next" href="Database-Automation-metadata.html">Query metadata &raquo;</a>
 </div>
@@ -44,7 +44,7 @@ I should say that this is _also_ expected since the underlying queries for them 
 
 ***
 
-<div class="site-links">
+<div class="site-links site-links-footer">
 <a class="link-previous" href="Database-Automation-selectvalidate.html">&laquo; SELECT to validate</a> | 
 <a class="link-next" href="Database-Automation-metadata.html">Query metadata &raquo;</a>
 </div>

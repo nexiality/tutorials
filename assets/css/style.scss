@@ -66,6 +66,14 @@ pre code {
     float:          right;
 }
 
+.site-links-header {
+    margin-top: -48px;
+}
+
+.site-links-footer {
+    float: left !important;
+}
+
 .site-links .link-next, .site-links .link-previous {
     text-shadow:      -1px 3px 8px rgba(160, 180, 80, 0.5);
     color:            #794 !important;
