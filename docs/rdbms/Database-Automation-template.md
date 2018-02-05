@@ -8,7 +8,7 @@
 </div>
 
 
-## Section 12: Template-based SQL Generation
+## Section 10: Template-based SQL Generation
 
 
 ***
