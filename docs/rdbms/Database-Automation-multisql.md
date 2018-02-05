@@ -1,16 +1,14 @@
 # Database Automation
+
 ![logo](image/logo-x.png)
 
 <div class="site-links site-links-header">
-<a class="link-previous" href="Database-Automation-dynamicsql.html">&laquo; Dynamic SQL / incorporate data variable</a> | 
-<a class="link-next" href="Database-Automation-selectvalidate.html">SELECT to validate &raquo;</a>
+<a class="link-previous" href="Database-Automation-transaction.html">&laquo; Transaction Support</a> | 
+<a class="link-next" href="Database-Automation-expression.html">Nexial Expression &raquo;</a>
 </div>
 
-## Section 3: SELECT to inspect
-We've seen multiple examples in the [previous](Database-Automation-dynamicsql.html) section how one 
-can use Nexial to display data from static or dynamically generated SQL queries.  In this section, 
-we will dig deeper and focus on the the various aspects of what we can inspect from the execution
-of one or more queries.
+
+## Section 10: Multiple SQLs
 
 
 ## SELECT one, SELECT all
@@ -52,20 +50,18 @@ To go one step further, Nexial also supports the execution of multiple SQL state
 
 This command behaves the same as `rdbms|runSQLs(var,db,sqls)` in terms of multiple SQL and Nexial 
 variable support, but also the benefit of completely externalizing SQL statements out of Nexial 
-artifacts.
+artifacts.  There is one other benefit (or at least a difference) with using an externalized SQL
+file - late data variable evaluation.
 
-## Inspect Results
+#### Late data variable evaluation
+The main idea is to evaluate the specified data variables at the last possible moment - in other word, 
+just-in-time.
 
-![Inspect1 data](image/rdbms-03-Inspect1.data.png)
-
-![Inspect1 script](image/rdbms-03-Inspect1.script.png)
-
-![Inspect1 output](image/rdbms-03-Inspect1.output.png)
 
 
 ***
 
 <div class="site-links site-links-footer">
-<a class="link-previous" href="Database-Automation-dynamicsql.html">&laquo; Dynamic SQL / incorporate data variable</a> | 
-<a class="link-next" href="Database-Automation-selectvalidate.html">SELECT to validate &raquo;</a>
+<a class="link-previous" href="Database-Automation-transaction.html">&laquo; Transaction Support</a> | 
+<a class="link-next" href="Database-Automation-expression.html">Nexial Expression &raquo;</a>
 </div>

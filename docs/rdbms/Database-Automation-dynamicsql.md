@@ -22,8 +22,8 @@ As a point of reference, this sample database has the following ERD:
 
 [![sample sqlite](image/sqlite-sample-database-diagram-color.png)](http://www.sqlitetutorial.net/sqlite-sample-database/)
 
-The examples shown here can be found in [this script](../artifact/script/rdbms-02.xlsx) and its 
-corresponding [data file](../artifact/data/rdbms-02.data.xlsx).
+The examples shown here can be found in [this script](../../artifact/script/rdbms-02.xlsx) and its 
+corresponding [data file](../../artifact/data/rdbms-02.data.xlsx).
 
 Now let's see some examples!
 
@@ -135,7 +135,7 @@ _partial WHERE clauses_:
 
 The general idea is to append one of these _partial WHERE clauses_ to `${song SQL}` and thus modify
 the impact of the said query.  In order to do so dynamically, we want to control the query 
-modification via [flow control](../../documentation/flowcontrols/).
+modification via [flow control](../../../documentation/flowcontrols/).
 
 Take a look at the script:<br/>
 ![DynamicSQL2 script](image/rdbms-02-DynamicSQL2.script.png)
@@ -183,7 +183,7 @@ flow control was not met.
 The last command saved the output to a CSV file (excerpt below):<br/>
 ![DynamicSQL2 csv](image/rdbms-02-DynamicSQL2.csv.png)
 
-And yes, they are all Jazz records!  :sunglasses: 
+And yes, they are all Jazz records! 😎
 
 
 ## Example 4: Runtime Data Variable Overrides
@@ -195,7 +195,7 @@ test steps were skipped.
 
 But we can also declare data variable, or override declared data variable, at runtime.  
 
-##### --- sidebar >>>
+#### [sidebar] >>>
 > Before we go further, a bit of explanation is warranted here.  In our script and data file, we 
 reference a data variable named `media type`.  While it is possible to define such variable at
 runtime via the above method (i.e. using `export ` or `set` command), having a space in the 
@@ -276,7 +276,7 @@ override.  Let's run the same script now:
 nexial.[sh|cmd] -script [PROJECT_HOME]/artifact/script/rdbms-02.xlsx -scenario DynamicSQL2a
 ```
 
-You can find a [sample project.properties here](../artifact/RENAME_TO_project.properties), which 
+You can find a [sample project.properties here](../../artifact/RENAME_TO_project.properties), which 
 you will need to rename from `RENAME_TO_projects.properties` to `project.properties` in order for 
 it to take effect.
 

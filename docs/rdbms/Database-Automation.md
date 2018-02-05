@@ -41,7 +41,7 @@ data variables with the same 'prefix':
 [PROFILE].treatNullAs= ...
 ```
 
-Check out [rdbms](../../documentation/commands/rdbms/) for more details.  We can add support for 
+Check out [rdbms](../../../documentation/commands/rdbms/) for more details.  We can add support for 
 more database upon request.
 
 Note the following:
@@ -61,14 +61,14 @@ Let's do a quick run to verify that the profile is set up correctly.  Here's the
 simply executes a query to retrieve the server's current time:<br/>
 ![Hello World](image/rdbms-01-HelloWorld.png)
 
-The corresponding [data file](../artifact/data/rdbms-01.data.xlsx) looks as follows:
+The corresponding [data file](../../artifact/data/rdbms-01.data.xlsx) looks as follows:
 
 | data sheet   |  content                                                  |
 | :----------- | :-------------------------------------------------------- |
 | [#default]   | ![#default](image/rdbms-mydb.png)          |
 | [HelloWorld] | ![Hello World, data](image/rdbms-01-HelloWorld.data.png)  |
 
-The referenced [sqlite db](../artifact/data/chinook.db) is located in the data directory.
+The referenced [sqlite db](../../artifact/data/chinook.db) is located in the data directory.
 
 Here's the output: <br/>
 ```
