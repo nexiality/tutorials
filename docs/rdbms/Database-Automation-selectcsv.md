@@ -2,11 +2,11 @@
 
 ![logo](image/logo-x.png)
 
-
-<div class="site-links site-links-footer">
+<div class="site-links site-links-header">
 <a class="link-previous" href="Database-Automation-selectvalidate.html">&laquo; SELECT to validate</a> | 
 <a class="link-next" href="Database-Automation-multisql.html">Multiple SQLs &raquo;</a>
 </div>
+
 
 ## Section 5: SELECT to CSV / bulk comparison
 
