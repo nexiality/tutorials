@@ -9,3 +9,5 @@ FROM EMPLOYEES WHERE LASTNAME = 'Brown' AND FIRSTNAME = 'James';
 -- sentry:insert_new_customer
 INSERT INTO CUSTOMERS (FIRSTNAME, LASTNAME, COMPANY, ADDRESS, CITY, STATE, COUNTRY, POSTALCODE, PHONE, FAX, EMAIL, SUPPORTREPID)
 VALUES ('John', 'Smith', 'Acme', '123 Elm Street', 'Fullerton', 'PA', 'USA', '10491', '702-541-2213', NULL, 'john.smith@acme.com', ${support_rep}.data[0].EmployeeId);
+
+
