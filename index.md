@@ -8,8 +8,8 @@ _excuse the mess while we are tidying up, do check in frequently as we will cont
 ---
 
 ### Available Tutorials
-- [Database Automation](docs/Database-Automation.md)
-- ...
+- [Database Automation](docs/rdbms/Database-Automation)
+- [API Automation](docs/ws/WS-Automation-intro)
 
 ---
 
