@@ -49,7 +49,7 @@ INSERT INTO EMPLOYEES (EMPLOYEEID, LASTNAME, FIRSTNAME, TITLE, REPORTSTO, BIRTHD
 	from EMPLOYEES
 ;
 
--- sentry:new_employees
+-- nexial:new_employees
 SELECT *
 FROM EMPLOYEES WHERE LASTNAME in ('Brown', 'Marshall', 'Stone')
 ;
