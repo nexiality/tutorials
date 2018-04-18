@@ -36,6 +36,9 @@ Activities further extend to test steps which includes cmd-type, command, params
 - **Params** are the parameters to be passed to command. It is comma separated and needs respective parameters to be given in respective param. So first parameter must be in param 1 and second in param 2 column.<br>
 For example, base cmd type has command save(var,value). It indicates that save command has two parameters var and value. var must be in param 1 and value in param 2.
 - **flow controls** is to provide variable flow so as to modify test execution depending on condition given at respective step in this column.<br>
+- **screenshot** is to capture screenshot after the step. For capturing screenshot just put "**x**" in the column. <br>
+&nbsp;&nbsp;&nbsp;**Note:** This is applicable only for UI applications like web and desktop. 
+
 Let's have look at three scenarios **base, number, io** etc.
    
 1. **base:-**<br>
@@ -68,9 +71,10 @@ Let's have look at three scenarios **base, number, io** etc.
     &nbsp;&nbsp;&nbsp;&nbsp;This worksheet has all the data variables used for current execution. Refer this image:<br>
     ![](image/Nexial-Introduction_06.png)<br>
     
-- Scenarios in output excel have **result** column which shows respective step is pass or fail. **elapsed ms** column display time taken to run respective step.<br>
-   If you are referring variable through ${varName}, then variable value will be shown in output file.<br> 
-   For example,In base scenario, for assertContains we have used variable as ${country}. We can see value as "US,India,China,England,Spain" in output file. On mouseover we can see actual variable as ${country}.<br>
+- Scenarios in output excel have **result** column which shows respective step is pass or fail. **elapsed ms** display time taken to run respective step.<br>
+
+   If you are referring variable through ${varName}, then variable will be replaced with actual value in output file.<br> 
+   For example,in base scenario, for assertContains we have used variable as ${country}. We can see value as "US,India,China,England,Spain" in output file. On mouseover we can see actual variable as ${country}.<br>
    
    Let's have look at output of above test scripts.
    
@@ -83,3 +87,8 @@ Let's have look at three scenarios **base, number, io** etc.
    3\. IO scenario:-<br>
    ![](image/Nexial-Introduction_09.png)
     
+ We will come up with more comprehensive examples in upcoming chapters. <br> 
+ 
+ Stay Tuned!
+ 
+ 
