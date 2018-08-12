@@ -1,10 +1,16 @@
+---
+layout: default
+title: Nexial Tutorials for Database Automation - SELECT to CSV
+permalink: /rdbms/selectcsv
+---
+
 # Database Automation
 
 ![logo](../image/logo-x.png)
 
 <div class="site-links site-links-header">
-<a class="link-previous" href="Database-Automation-selectvalidate.html">&laquo; SELECT to validate</a> | 
-<a class="link-next" href="Database-Automation-multisql.html">Multiple SQLs &raquo;</a>
+<a class="link-previous" href="selectvalidate.html">&laquo; SELECT to validate</a> | 
+<a class="link-next" href="multisql.html">Multiple SQLs &raquo;</a>
 </div>
 
 
@@ -45,6 +51,6 @@ I should say that this is _also_ expected since the underlying queries for them 
 ***
 
 <div class="site-links site-links-footer">
-<a class="link-previous" href="Database-Automation-selectvalidate.html">&laquo; SELECT to validate</a> | 
-<a class="link-next" href="Database-Automation-multisql.html">Multiple SQLs &raquo;</a>
+<a class="link-previous" href="selectvalidate.html">&laquo; SELECT to validate</a> | 
+<a class="link-next" href="multisql.html">Multiple SQLs &raquo;</a>
 </div>

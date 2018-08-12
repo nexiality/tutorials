@@ -29,3 +29,5 @@ output/
 *.ipr
 ~*.*
 tutorials.iml
+
+.jekyll-metadata

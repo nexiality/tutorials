@@ -1,3 +1,9 @@
+---
+layout: default
+title: Introduction
+permalink: /introduction/index
+---
+
 # Introduction
 > Tutorials for Nexial, Test Automation for Everyone!
 

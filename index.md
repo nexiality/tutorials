@@ -1,3 +1,9 @@
+---
+layout: default
+title: Nexial Tutorials
+permalink: /index
+---
+
 # Nexial Tutorials
 > Tutorials for Nexial, Test Automation for Everyone!
 
@@ -8,8 +14,8 @@ _excuse the mess while we are tidying up, do check in frequently as we will cont
 ---
 
 ### Available Tutorials
-- [Database Automation](docs/rdbms/Database-Automation)
-- [API Automation](docs/ws/WS-Automation-intro)
+- [Database Automation](rdbms/)
+- [API Automation](ws/)
 
 ---
 

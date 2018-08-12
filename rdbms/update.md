@@ -1,10 +1,16 @@
+---
+layout: default
+title: Nexial Tutorials for Database Automation - UPDATE
+permalink: /rdbms/update
+---
+
 # Database Automation
 
 ![logo](../image/logo-x.png)
 
 <div class="site-links site-links-header">
-<a class="link-previous" href="Database-Automation-multisql.html">&laquo; Multiple SQLs</a> | 
-<a class="link-next" href="Database-Automation-expression.html">Nexial Expression &raquo;</a>
+<a class="link-previous" href="multisql.html">&laquo; Multiple SQLs</a> | 
+<a class="link-next" href="expression.html">Nexial Expression &raquo;</a>
 </div>
 
 
@@ -46,6 +52,6 @@ such transaction.  Here's how such condition would show up in test result:<br/>
 ***
 
 <div class="site-links site-links-header">
-<a class="link-previous" href="Database-Automation-multisql.html">&laquo; Multiple SQLs</a> | 
-<a class="link-next" href="Database-Automation-expression.html">Nexial Expression &raquo;</a>
+<a class="link-previous" href="multisql.html">&laquo; Multiple SQLs</a> | 
+<a class="link-next" href="expression.html">Nexial Expression &raquo;</a>
 </div>

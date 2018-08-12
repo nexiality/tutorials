@@ -1,3 +1,9 @@
+---
+layout: default
+title: Nexial Tutorial Plan
+permalink: /plan
+---
+
 #Plan For Nexial Tutorials
 > Tutorials for Nexial, Test Automation for Everyone!
 

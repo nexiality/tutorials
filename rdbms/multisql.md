@@ -1,10 +1,16 @@
+---
+layout: default
+title: Nexial Tutorials for Database Automation - Multiple SQLs
+permalink: /rdbms/multisql
+---
+
 # Database Automation
 
 ![logo](../image/logo-x.png)
 
 <div class="site-links site-links-header">
-<a class="link-previous" href="Database-Automation-selectcsv.html">&laquo; SELECT to CSV / bulk comparions</a> | 
-<a class="link-next" href="Database-Automation-update.html">UPDATE database &raquo;</a>
+<a class="link-previous" href="selectcsv.html">&laquo; SELECT to CSV / bulk comparions</a> | 
+<a class="link-next" href="update.html">UPDATE database &raquo;</a>
 </div>
 
 
@@ -93,6 +99,6 @@ below:<br/>
 ***
 
 <div class="site-links site-links-header">
-<a class="link-previous" href="Database-Automation-selectcsv.html">&laquo; SELECT to CSV / bulk comparions</a> | 
-<a class="link-next" href="Database-Automation-update.html">UPDATE database &raquo;</a>
+<a class="link-previous" href="selectcsv.html">&laquo; SELECT to CSV / bulk comparions</a> | 
+<a class="link-next" href="update.html">UPDATE database &raquo;</a>
 </div>

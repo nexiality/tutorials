@@ -1,3 +1,8 @@
+---
+layout: default
+title: Nexial Tutorials for Web Automation
+permalink: /web/index
+---
 
 ### Web Automation Sessions
 1. Introduction

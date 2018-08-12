@@ -1,9 +1,15 @@
+---
+layout: default
+title: Nexial Tutorials for Database Automation - Dynamic SQL
+permalink: /rdbms/dynamicsql
+---
+
 # Database Automation
 ![logo](../image/logo-x.png) 
 
 <div class="site-links site-links-header">
 <a class="link-previous" href="Database-Automation.html">&laquo; Introduction</a> | 
-<a class="link-next" href="Database-Automation-selectinspect.html">SELECT to inspect &raquo;</a>
+<a class="link-next" href="selectinspect.html">SELECT to inspect &raquo;</a>
 </div>
 
 
@@ -341,5 +347,5 @@ In the next section we'll get a better understand of what we can inspect from a 
 
 <div class="site-links site-links-footer">
 <a class="link-previous" href="Database-Automation.html">&laquo; Introduction</a> | 
-<a class="link-next" href="Database-Automation-selectinspect.html">SELECT to inspect &raquo;</a>
+<a class="link-next" href="selectinspect.html">SELECT to inspect &raquo;</a>
 </div>

@@ -1,4 +1,10 @@
-# Database Automation 
+---
+layout: default
+title: Nexial Tutorials for Web Service Automation
+permalink: /ws/index
+---
+
+# Web Service Automation 
 ![logo](../image/logo-x.png)
 
 <div class="site-links site-links-header">
