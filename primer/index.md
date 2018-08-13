@@ -88,7 +88,7 @@ behaves during execution. The other type is user-defined data variables, which c
 they conform to the following:
 1. They don't start with `nexial.`
 2. They don't contain `$`, `{` or `}` character as part of its name.
-3. They don't contain newline, carriage return or tab characters.
+3. They don't contain newline (`\n`), carriage return (`\r`) or tab (`\t`) characters.
 
 These data variables can be defined in a variety of locations. By convention, there should be a data file matching by 
 name to the script file. So a script in `C:\projects\MyProject\artifact\script\Script097.xlsx` would have a matching
