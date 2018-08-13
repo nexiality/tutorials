@@ -5,9 +5,6 @@ permalink: /rdbms/template
 ---
 
 # Database Automation
-
-![logo](../image/logo-x.png)
-
 <div class="site-links site-links-header">
 <a class="link-previous" href="expression.html">&laquo; Nexial Expression</a> | 
 <a class="link-none">next &raquo;</a>

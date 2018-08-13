@@ -3,92 +3,130 @@
 
 @import "{{ site.theme }}";
 
+// customization starts here
+
 header {
-    padding: 40px 20px;
+  padding: 20px 15px !important;
+}
+
+header {
+}
+
+header h1 {
+  font-size: 38pt !important;
+  width:     auto !important;
+}
+
+header h2 {
+  font-size: 20pt !important;
+  width:     auto !important;
+}
+
+header .inner {
+  height:                105px;
+  background:            url("../../image/logo-x.png") no-repeat;
+  background-size:       100px 100px;
+  background-position-x: right;
+  background-position-y: center;
+  margin-right:          10px;
 }
 
 #content-wrapper {
-    padding: 20px 50px;
+  padding: 20px 40px;
 }
 
 .inner {
-    width: auto !important;
+  width: auto !important;
 }
 
 .inner a.button {
-    display:    none;
-    visibility: hidden;
+  display:    none;
+  visibility: hidden;
 }
 
 #main-content {
-    width: 980px;
+  width: 950px;
 }
 
 #main-content h1 {
-    margin: 5px auto;
+  margin:    5px auto;
+  font-size: 38px !important;
 }
 
 #main-content h2 {
-    text-indent:      11px !important;
-    border-bottom:    1px solid #ccc;
-    border-top:       1px solid #ccc;
-    background-color: #e5eef3;
-    padding:          5px 0;
-    margin:           30px 0 10px 0;
+  text-indent:      11px !important;
+  border-bottom:    1px solid #ccc;
+  border-top:       1px solid #ccc;
+  background-color: #e5eef3;
+  padding:          5px 0;
+  margin:           30px 0 10px 0;
+}
+
+#main-content h3 {
+  text-indent:      10px !important;
+  border-bottom:    1px solid #bbb;
+  border-top:       1px solid #bbb;
+  background-color: #d5dde3;
+  padding:          3px 0;
+  margin:           15px 0 10px 0;
 }
 
 #main-content img {
-    max-width: none !important;
+  max-width: none !important;
 }
 
 th {
-    background-color: #e8eef5;
+  background-color: #e8eef5;
 }
 
 td, th {
-    padding: 5px !important;
+  padding: 5px !important;
+}
+
+pre {
+  background-color: rgba(210, 210, 210, 0.2) !important;
 }
 
 pre code {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 #sidebar {
-    display:    none;
-    visibility: hidden;
+  display:    none;
+  visibility: hidden;
 }
 
 .site-links {
-    vertical-align: middle;
-    font-size:      10pt;
-    text-transform: lowercase;
-    color:          #999;
-    float:          right;
+  vertical-align: middle;
+  font-size:      10pt;
+  text-transform: lowercase;
+  color:          #999;
+  float:          right;
 }
 
 .site-links-header {
-    margin-top: -48px;
+  margin-top: -40px;
 }
 
 .site-links-footer {
-    float: left !important;
+  float: left !important;
 }
 
 .site-links .link-next, .site-links .link-previous {
-    text-shadow:      -1px 3px 8px rgba(160, 180, 80, 0.5);
-    color:            #794 !important;
-    font-weight:      bold;
-    letter-spacing:   0pt;
-    background-color: rgba(240, 250, 210, 0.5);
-    padding:          3px;
+  text-shadow:      -1px 3px 8px rgba(160, 180, 80, 0.5);
+  color:            #794 !important;
+  font-weight:      bold;
+  letter-spacing:   0pt;
+  background-color: rgba(240, 250, 210, 0.5);
+  padding:          3px;
 }
 
 .site-links .link-next:hover, .site-links .link-previous:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .site-links .link-none {
-    color:       #ccc !important;
-    cursor:      default;
-    font-weight: lighter !important;
+  color:       #ccc !important;
+  cursor:      default;
+  font-weight: lighter !important;
 }

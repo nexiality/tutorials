@@ -1,6 +1,6 @@
 theme: jekyll-theme-architect
-title: Nexial Tutorial
-description: Test Automation Platform for everyone!
+title: Tutorials for Nexial
+description: The Test Automation Platform for everyone!
 
 plugins:
    - jekyll-mentions

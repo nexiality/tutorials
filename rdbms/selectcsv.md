@@ -5,9 +5,6 @@ permalink: /rdbms/selectcsv
 ---
 
 # Database Automation
-
-![logo](../image/logo-x.png)
-
 <div class="site-links site-links-header">
 <a class="link-previous" href="selectvalidate.html">&laquo; SELECT to validate</a> | 
 <a class="link-next" href="multisql.html">Multiple SQLs &raquo;</a>

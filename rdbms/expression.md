@@ -5,9 +5,6 @@ permalink: /rdbms/expression
 ---
 
 # Database Automation
-
-![logo](../image/logo-x.png)
-
 <div class="site-links site-links-header">
 <a class="link-next" href="update.html">&laquo; UPDATE database</a> | 
 <a class="link-next" href="template.html">Template-based SQL Generation &raquo;</a>
