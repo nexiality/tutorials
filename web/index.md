@@ -8,6 +8,18 @@ permalink: /web/index
 1. Introduction
 2. Interacting with Browser
 3. Locators
+    - xpath:
+        contains
+        //ancestor::div
+        //preceding::div
+        //following::input
+        //following-sibling::input
+        //child::input
+        //descendant::input
+        AND, OR
+        [starts-with(@id, '...')]
+        array index ref
+        
 4. Cross-browser Automation
 5. Integration with BrowserStack
 6. Headless browser automation
