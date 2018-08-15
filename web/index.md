@@ -12,8 +12,10 @@ permalink: /web/index
         contains
         //ancestor::div
         //preceding::div
+            //*[@id='widgetFilters']//div[text()='Availibility']//following-sibling::input[@type='checkbox']
         //following::input
         //following-sibling::input
+            //*[@id='widgetContent']//*[contains(@class,'dealDetailContainer')]/preceding-sibling::a[@id='dealImage']
         //child::input
         //descendant::input
         AND, OR
