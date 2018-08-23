@@ -5,8 +5,8 @@
     <title>My Deals on Amazon Deals</title>
     <style>
         body {
-            font-size:   11pt;
-            background:  url("deals.background.png");
+            font-size:  11pt;
+            background: url("deals.background.png");
             /*padding:     10pt;*/
             /*line-height: 142%;*/
         }
@@ -24,6 +24,36 @@
             border-bottom:  2px #555 solid;
         }
 
+        h3 {
+            padding:                    15px 20px;
+            margin-top:                 -25px;
+            background-color:           rgba(0, 40, 40, 0.75);
+            color:                      rgba(250, 250, 250, 0.85);
+            font-family:                "Trebuchet MS", serif;
+            font-weight:                normal;
+            text-shadow:                2px 2px 1px rgba(0, 50, 50, 0.75);
+            box-shadow:                 0 0 15px rgba(100, 100, 100, 0.75);
+            border-bottom-left-radius:  20px;
+            border-bottom-right-radius: 20px;
+            text-align:                 center;
+        }
+
+        h3 > span {
+            margin: 0 20px;
+        }
+
+        h3 .dealsMeta_startTime {
+            color: rgba(220, 220, 150, 1);
+        }
+
+        h3 .dealsMeta_timeSpend {
+            color: rgba(150, 220, 150, 1);
+        }
+
+        h3 .dealsMeta_dealsFound {
+            color: rgba(150, 180, 220, 1);
+        }
+
         div#mydeals {
             background:  rgba(150, 150, 100, 0.35);
             padding:     15px;
@@ -32,29 +62,34 @@
         }
 
         div#mydeals > div {
-            padding:    10px;
-            border:     2px solid rgba(255, 255, 255, 0.5);
+            padding:    0;
+            border:     15px solid #fff;
             margin:     15px 0;
-            background: rgba(255, 255, 255, 1);
-            clear:      both;
-        }
+            background: rgba(255, 255, 255, 0.5);
+            clear:      both; }
 
         div#mydeals a {
             text-decoration: none;
             font-weight:     normal;
+            box-shadow:      0 0 50px rgba(195, 180, 100, 0.95);
         }
 
         div#mydeals table tr td {
             vertical-align: middle;
         }
 
+        div#mydeals table tr td.item_img_container {
+            background:#fff;
+        }
+
         div#mydeals > div img {
-            float: right;
+            float:        right;
+            margin-right: 20px;
         }
 
         div#mydeals > div span {
             clear:       both;
-            margin-left: 20px;
+            margin-left: 50px;
             display:     block;
             font-family: Tahoma, sans-serif;
         }
@@ -62,15 +97,27 @@
         div#mydeals > div span.deal-name {
             float:       left;
             font-weight: bold;
-            margin-left: 0 !important;
+            margin-left: 20px !important;
             color:       #088;
             padding:     10px 5px;
         }
 
+        footer {
+            color:         #888;
+            padding:       5px 0;
+            text-align:    center;
+            font-size:     8pt;
+            font-family:   "Verdana", serif;
+            margin:        35px 0 0;
+            border-top:    1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            background:    rgba(255, 255, 255, 0.75);
+        }
     </style>
 </head>
-<body>
+<body onload="addMetadata()">
 
 <h1>My Amazon Deals</h1>
+<h3 id="dealsMeta">&nbsp;</h3>
 
 <div id="mydeals">
