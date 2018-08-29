@@ -1,0 +1,19 @@
+</div>
+<footer>powered by Nexial Automation Platform &copy; 2018</footer>
+<script>
+    var startTime  = ${scan start time};
+    var endTime    = ${scan end time};
+    var dealsFound = ${deals found};
+
+    function addMetadata() {
+        var startTimeString                            = new Date(startTime);
+        var timespan                                   = (endTime - startTime) / 1000;
+        document.getElementById("dealsMeta").innerHTML =
+            '<span class="dealsMeta_startTime">Start Time: ' + startTimeString + '</span>' +
+            '<span class="dealsMeta_timeSpend">Time Spent: ' + timespan + ' seconds</span>' +
+            '<span class="dealsMeta_dealsFound">Items Found: ' + dealsFound + '</span>' +
+            '<span class="dealsMeta_browser">Via: ${nexial.browser}</span>';
+    };
+</script>
+</body>
+</html>
