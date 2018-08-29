@@ -186,7 +186,7 @@ Test Plan is used to execute multiple scripts in one go. It may be synchronously
 - **wait?** will decide to wait or not to complete previous scripts. If it's `no`, it will run all the scripts asynchronously 
   and won't wait to complete previous scripts' execution.
  
- ### How to execute plan?
+### How to execute plan?
  1. Automation Engineer(AE) can run the plan by executing the following command:-<br>
  (Mac/*Nix): ```./nexial.sh -plan <FULLY QUALIFIED PATH TO THE PLAN>```<br>
  (Windows): ```nexial.cmd -plan <FULLY QUALIFIED PATH TO THE PLAN>```
@@ -195,8 +195,8 @@ Test Plan is used to execute multiple scripts in one go. It may be synchronously
  ```nexial.cmd -plan \<plan file1>,\<plan file2>,\<plan file3>``` 
     For more details, visit [Executing Multiple Test Plans](https://nexiality.github.io/documentation/userguide/ExecutingMultiplePlanFiles)
     
- ### Iteration
- Iteration is the group of scenarios in the script. Lets have a look at the following data file.<br>
+### Iteration
+ Iteration is the group of scenarios in the test script. Lets have a look at the following data file.<br>
  ![](image/Nexial-Introduction_10.png)
  
  Each column in data file represents successive iterations for that data variable. For example, var1 has `value1` for first iteration, 
