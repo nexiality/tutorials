@@ -165,4 +165,52 @@ Let's use the following examples to further understand the basic capabilities of
      3. The `io` scenario output:<br/>
         ![](image/Nexial-Introduction_09.png)
 
+## Understanding Test Plan and Iteration
+### Test Plan
+
+Test Plan is used to execute multiple scripts in one go. It may be synchronously or asynchronously. Let's have a look at
+ the various key components of [Nexial TEST PLAN](https://nexiality.github.io/documentation/userguide/UnderstandingExcelTemplates#anatomy-of-a-nexial-test-plan).
+
+- **description** is the narrative of that particular script.
+- **test script** is the path of the script file. The script file in `${project}/artifact/script` location can be 
+  specified with file name only.
+- **test scenarios** provides option to execute required scenarios where the multiple scenarios are separated by
+  **comma(,)**. If the test scenarios are empty, Nexial will execute all the scenarios in the test script.
+- **test data** is the path of the data file. The data file in `${project}/artifact/data` can be specified with the 
+  file name only. If test data is not mentioned, then it will consider default data file for the script named 
+  `<scriptName>-data.xlsx`. 
+- **data sheets** is the data sheets to be used for execution. Those are the named test scenarios and #default are meant 
+  to be considered if nothing is mentioned.
+- **fail fast?** is to handle test execution after failure is found in the script. if it's `yes`, it will terminate Nexial
+  execution as executing script completes. 
+- **wait?** will decide to wait or not to complete previous scripts. If it's `no`, it will run all the scripts asynchronously 
+  and won't wait to complete previous scripts' execution.
+ 
+ ### How to execute plan?
+ 1. Automation Engineer(AE) can run the plan by executing the following command:-<br>
+ (Mac/*Nix): ```./nexial.sh -plan <FULLY QUALIFIED PATH TO THE PLAN>```<br>
+ (Windows): ```nexial.cmd -plan <FULLY QUALIFIED PATH TO THE PLAN>```
+ 
+ 2. To execute multiple plan AE can execute following command:-<br>
+ ```nexial.cmd -plan \<plan file1>,\<plan file2>,\<plan file3>``` 
+    For more details, visit [Executing Multiple Test Plans](https://nexiality.github.io/documentation/userguide/ExecutingMultiplePlanFiles)
+    
+ ### Iteration
+ Iteration is the group of scenarios in the script. Lets have a look at the following data file.<br>
+ ![](image/Nexial-Introduction_10.png)
+ 
+ Each column in data file represents successive iterations for that data variable. For example, var1 has `value1` for first iteration, 
+ `apple` for second and `mango` for third iteration.<br>
+ The first two system variables in the data file are important for iteration testing.<br>
+ 1. **`nexial.scope.iteration`**:- Automation Engineer can specify iteration or iteration range to be executed. Following are various ways of
+ describing iteration number.<br>
+ ![](image/Nexial-Introduction_11.png)
+  
+ 2. **`nexial.scope.fallbackToPrevious`**:- If desired data is not defined for the iteration, Set this to `true` means it will 
+ allow AE to traverse backward to previous iterations until data is found. <br>
+ For example, in above image `nexial.textDelim` variable is not defined for second and third iteration. It will traverse 
+ backward till the first iteration since `nexial.scope.fallbackToPrevious` is set to `true`. So `nexial.textDelim` will be 
+ `,(comma)` for second and third iteration. 
+ 
+ 
 _More to come..._
