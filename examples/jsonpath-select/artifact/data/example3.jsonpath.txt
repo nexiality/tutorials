@@ -1,0 +1,3 @@
+company => ascending
+email => descending
+friends[id=0].name
