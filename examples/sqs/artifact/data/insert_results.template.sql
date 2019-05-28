@@ -1,0 +1,1 @@
+INSERT INTO search_results (search_request_id, response_time, site, title, url, image, price, location) VALUES ('${search_id}', ${response_time}, '${site}', '${title}', '${url}', '${image}', ${price}, '${location}');

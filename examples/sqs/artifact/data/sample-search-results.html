@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"/>
+  <link rel="stylesheet" href="http://nexiality.github.io/documentation/assets/project/datatables.min.css"/>
+  <link rel="stylesheet" href="search-results.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://nexiality.github.io/documentation/assets/project/datatables.min.js"></script>
+  <script>
+    'use strict';
+    const JSON_URL = "sample-search-result.json";
+  </script>
+</head>
+<body>
+<div id="app">
+  <div class="title">Concurrent Product Search for <span>{{ searchResult.searchTerms }}</span></div>
+  <div class="sub-title">Last Updated: {{ formatDateTime(searchResult.responseTime) }}</div>
+
+  <div class="search-results">
+    <table id="search-results" class="display">
+      <thead>
+      <tr>
+        <th><i class="fas fa-globe-americas"></i></th>
+        <th><i class="fas fa-info-circle"></i></th>
+        <th><i class="fas fa-camera"></i></th>
+        <th><i class="fas fa-dollar-sign"></i></th>
+        <th><i class="fas fa-shipping-fast"></i></th>
+        <th><i class="fas fa-map-marked-alt"></i></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr :id="'item' + resultStat" v-for="(result,resultStat) in searchResult.results">
+        <td class="source">{{ result.site }}</td>
+        <td class="description"><a v-bind:href="result.url" target="_blank">{{ result.title }}</a></td>
+        <td class="image"><img :src="result.image" onmouseover="bigImage(this)" onmouseout="smallImage(this)"/></td>
+        <td class="price">{{ formatPrice(result.price) }}</td>
+        <td class="shipping">{{ formatShipping(result.shipping) }}</td>
+        <td class="location">{{ result.location }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>powered by <a href="https://bit.ly/nexial">Nexial Automation</a>&nbsp;&nbsp;&nbsp;</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="search-results.js"></script>
+</body>
+</html>
