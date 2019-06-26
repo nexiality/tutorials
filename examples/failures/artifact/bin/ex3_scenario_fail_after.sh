@@ -16,5 +16,5 @@ echo ""
 
 read -n 1 -s -r -p "Press any key to continue"
 
-nexial.sh -script ~/projects/nexial/tutorials/examples/failures/artifact/script/ScenarioTest.xlsx -scenario Scenario3,Scenario2
+nexial.sh -script ../script/ScenarioTest.xlsx -scenario Scenario3,Scenario2
 

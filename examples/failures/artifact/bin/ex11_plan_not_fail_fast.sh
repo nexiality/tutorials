@@ -17,4 +17,4 @@ echo ""
 
 read -n 1 -s -r -p "Press any key to continue"
 
-nexial.sh -plan ~/projects/nexial/tutorials/examples/failures/artifact/plan/PlanTest2.xlsx
+nexial.sh -plan ../plan/PlanTest2.xlsx
