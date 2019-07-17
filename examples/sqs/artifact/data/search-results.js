@@ -1,6 +1,6 @@
 'use strict';
 
-function fetchJsonData(sink) { $.getJSON(JSON_URL, function (json_data) { sink.searchResult = json_data; }); }
+// function fetchJsonData(sink) { $.getJSON(JSON_URL, function (json_data) { sink.searchResult = json_data; }); }
 
 function bigImage(img) {
   let image = $(img);
@@ -16,11 +16,13 @@ function smallImage(img) {
 
 let app = new Vue({
   el:         '#app',
-  data:       {searchResult: null},
+  data:       {searchResult: searchResult},
   components: {},
-  mounted:    function () { fetchJsonData(this); },
+  // mounted:    function () { fetchJsonData(this); },
   methods:    {
-    formatDateTime: function (/*Int*/epoch) { return !epoch ? '' : moment(epoch).format('YYYY/MM/DD HH:mm:ss'); },
+    formatDateTime: function (/*Int*/epoch) {
+      return !epoch || epoch === '' ? '' : moment(epoch).format('YYYY/MM/DD HH:mm:ss');
+    },
     formatPrice:    function (amount) {
       if (!amount) { return ''; }
       if (amount.match(/^\$.+/)) { amount = amount.substring(1); }

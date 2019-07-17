@@ -1,5 +1,7 @@
 @echo off
 
+set PROJECT_HOME==%~dp0..\..
+
 echo --------------------------------------------------------------------------------
 echo [ EXAMPLE 4                                                                    ]
 echo --------------------------------------------------------------------------------
@@ -15,5 +17,4 @@ echo ""
 
 pause
 
-nexial.cmd -script ../script/ScenarioTest.xlsx -scenario Scenario4,Scenario5
-
+nexial.cmd -script "%PROJECT_HOME%\artifact\script\ScenarioTest.xlsx" -scenario Scenario4,Scenario5

@@ -1,5 +1,8 @@
 #!/bin/sh
 
+PROJECT_HOME=$(cd `dirname $0`/../..; pwd -P)
+echo "${PROJECT_HOME}"
+
 echo "--------------------------------------------------------------------------------"
 echo "[ EXAMPLE 2                                                                    ]"
 echo "--------------------------------------------------------------------------------"
@@ -15,4 +18,4 @@ echo ""
 
 read -n 1 -s -r -p "Press any key to continue"
 
-nexial.sh -script ../script/ScenarioTest.xlsx -scenario Scenario2,Scenario3
+nexial.sh -script "$PROJECT_HOME/artifact/script/ScenarioTest.xlsx" -scenario Scenario2,Scenario3

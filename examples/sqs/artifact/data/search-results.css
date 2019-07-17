@@ -77,9 +77,9 @@ a {
 #search-results tbody .image img {
     width:         36px;
     height:        36px;
-    box-shadow:    2px 2px 10px rgba(100, 130, 130, 0.5);
-    border:        1px solid rgba(150, 180, 180, 0.5);
-    border-radius: 20px;
+    box-shadow:    0 0 10px rgba(100, 130, 130, 0.75);
+    border:        1px solid rgba(150, 180, 180, 0.25);
+    border-radius: 30px;
 }
 
 #search-results tbody .price {
