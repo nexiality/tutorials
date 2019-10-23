@@ -1,0 +1,6 @@
+{ 
+  "Name":     "${Name}", 
+  "Favorite": "${Favorite}", 
+  "Music":    "${Music}" 
+}
+
